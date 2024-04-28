@@ -6,7 +6,7 @@ import { SparkleComponent } from "../../icons/sparkle/sparkle.component";
     selector: 'app-home',
     standalone: true,
     templateUrl: './home.component.html',
-    styleUrl: './home.component.css',
+    styleUrl: './home.component.scss',
     imports: [ArrowRightComponent, SparkleComponent]
 })
 export class HomeComponent {
