@@ -14,6 +14,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { SendComponent } from '../../icons/send/send.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -35,7 +36,7 @@ export class ChatComponent implements AfterViewInit {
   messages: Message[] = [];
   chatForm!: FormGroup;
 
-  constructor(private service: MessageService) {
+  constructor(private service: MessageService, private router: Router) {
     this.chatForm = new FormGroup({
       message: new FormControl('', [Validators.required]),
     });
@@ -74,5 +75,9 @@ export class ChatComponent implements AfterViewInit {
         this.updateLocalStorage();
       },
     });
+  }
+
+  closeChat() {
+    this.router.navigate([""])
   }
 }

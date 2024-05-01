@@ -1,9 +1,9 @@
 <main class="chat-wrapper">
   <header>
     <button>
-      <icon-arrow-left></icon-arrow-left>
+      <icon-arrow-left (click)="closeChat()"></icon-arrow-left>
     </button>
-    <icon-museum class="museum"></icon-museum>
+    <icon-museum class="museum" (click)="closeChat()"></icon-museum>
     <div class="status">
       <p>Museu</p>
       <span>• Online</span>
