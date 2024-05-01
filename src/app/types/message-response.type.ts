@@ -1,3 +1,3 @@
-export type MessageResponse  = {
-  response: string
+export type MessageResponse = {
+    response: string
 }
